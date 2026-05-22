@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:clickhouse://localhost:8123/foodmart
+    username: olap
+    password: olap123
+    driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+  jpa:
+    properties:
+      hibernate:
+        dialect: net.vorlon.jdbc.clickhouse.dialect.ClickHouseHibernateDialect
+
+
+server:
+  port: 7070
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
